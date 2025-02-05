@@ -3,11 +3,10 @@
  <title>
  @yield('titulo')
  </title>
+ <link rel="stylesheet" href="/css/app.css" type="text/css">
  </head>
  <body>
- <nav>
-
- </nav>
+@include('partials.nav')
  @yield('contenido')
  </body>
 </html>
