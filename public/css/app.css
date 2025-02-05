@@ -12021,3 +12021,7 @@ nav div:nth-child(2) > div:hover {
   width: 90%;
   margin: 10px auto !important;
 }
+
+a:hover {
+  transform: scale(105%);
+}

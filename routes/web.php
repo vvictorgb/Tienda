@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\ProductoController;
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -31,4 +32,7 @@ Route::post('login', [LoginController::class, 'login']);
 
 Route::get('productos', [ProductoController::class, 'index'])->middleware('auth');
 Route::get('productos/{id}', [ProductoController::class, 'show'])->middleware('auth');
+
+Route::get('crud', [UserController::class, 'index'])->middleware(['auth', 'roles:admin']);
+
 

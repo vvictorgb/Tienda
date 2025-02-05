@@ -2,30 +2,30 @@
 @section('titulo', 'ListaProductos')
 @section('contenido')
 
-    <div class="contenedorFotos">
-        <div class="row">
+    <div class="contenedorFotos" style="position: relative; left: 45px">
+        <div class="row column-gap-3">
             @foreach($productos as $producto)
-                <div class="col-md-3">
-                    <div class="card espacioCard">
-                        <!-- Imagen (usando el enlace de la propiedad 'imagen') -->
-                        <img src="{{ $producto->imagen }}" class="card-img-top" alt="{{ $producto->nombre }}">
 
-                        <div class="card-body">
-                            <div class="encabezadoCard">
-                                <!-- Nombre del Producto -->
-                                <h5 class="card-nombre">{{ $producto->nombre }}</h5>
-                                <!-- Precio -->
-                                <h5 class="precio">{{ $producto->precio }} €</h5>
-                            </div>
+            <div class="card espacioCard col-md-3" style="width: 25rem; min-height: 600px">
 
-                            <!-- Descripción -->
-                            <p class="card-descripcion">{{ $producto->descripcion }}</p>
+                <img src="{{ $producto->imagen }}" class="card-img-top" style="height: 400px; object-fit: cover;" alt="{{ $producto->nombre }}">
 
-                            <!-- Enlace de detalle -->
-                            <a href="" class="btn btn-primary sombraInfo">Más información</a>
-                        </div>
+                <div class="card-body text-center">
+                    <div class="encabezadoCard">
+
+                        <h5 class="card-nombre">{{ $producto->nombre }}</h5>
+
+                        <h5 class="precio">{{ $producto->precio }} €</h5>
                     </div>
+
+
+                    <p class="card-descripcion">{{ $producto->descripcion }}</p>
+
+
+                    <a href="productos/{{$producto->id}}" class="btn btn-primary sombraInfo">Más información</a>
                 </div>
+            </div>
+
             @endforeach
         </div>
     </div>
