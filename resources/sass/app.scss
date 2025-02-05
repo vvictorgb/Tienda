@@ -1,0 +1,67 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+
+// Variables
+@import 'variables';
+
+// Bootstrap
+@import '~bootstrap/scss/bootstrap';
+
+
+
+body{
+background-color: rgb(228, 156, 88);
+}
+nav{
+    height: 200px;
+    border-top:10px solid black ;
+    width: 100%;
+    border-bottom:10px solid black ;
+    div:nth-child(1){
+        width: 50%;
+        margin: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 20px;
+        margin-bottom: 40px;
+        img{
+            height: 50px;
+            width: auto;
+        }
+    }
+    div:nth-child(2){
+        width: 100%;
+        text-align: center;
+        font-size: 24px;
+        height: 70px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        line-height: 70px;
+        >div{
+            width: 100%;
+            text-align: center;
+            font-size: 24px;
+            margin: 0;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            &:hover{
+                background-color: rgb(233, 147, 67); ;
+            }
+        }
+    }
+
+}
+
+
+.espacioCard{
+    margin-top: 15px;
+}
+.contenedorFotos{
+    width: 90%;
+    margin:10px auto !important;
+
+}

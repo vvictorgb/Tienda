@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\ProductoController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -18,11 +19,16 @@ Route::get('/', function () {
     return view('welcome');
 })->middleware('auth');
 
-Route::get('productos', function () {
-    return view('productos');
-})->middleware('auth');
+
+
 
 
 Route::get('login', [LoginController::class, 'loginForm'])->name('login');
 
 Route::post('login', [LoginController::class, 'login']);
+
+
+
+Route::get('productos', [ProductoController::class, 'index'])->middleware('auth');
+Route::get('productos/{id}', [ProductoController::class, 'show'])->middleware('auth');
+
