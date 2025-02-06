@@ -25,7 +25,7 @@
                 </div>
 
                 <div class="mt-4">
-                    <a href="{{ url('productos') }}" class="btn btn-secondary">Volver al listado</a>
+                    <a href="{{ route('listadoProductos') }}" class="btn btn-secondary">Volver al listado</a>
                     <button type="submit" class="btn btn-primary">Añadir al carrito</button>
                 </div>
             </form>
