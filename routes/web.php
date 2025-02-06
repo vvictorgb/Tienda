@@ -31,10 +31,10 @@ Route::get('productos/{id}', [ProductoController::class, 'show'])->middleware('a
 Route::get('crud', [UserController::class, 'index'])->name('crud')->middleware(['auth', 'roles:admin']);
 Route::delete('crud/{id}', [UserController::class, 'destroy'])->name('users.destroy')->middleware(['auth', 'roles:admin']);
 
-Route::get('crud/crear', [UserController::class, 'create'])->name('users.create')->middleware(['auth', 'roles:admin']);
-Route::post('crud', [UserController::class, 'store'])->name('añadirUsuario')->middleware(['auth', 'roles:admin']);
-Route::get('crud/{id}/edit', [UserController::class, 'edit'])->name('editarUsuario')->middleware(['auth', 'roles:admin']);
-Route::put('crud/{id}', [UserController::class, 'update'])->name('modificar')->middleware(['auth', 'roles:admin']);
+Route::get('crud/crear', [UserController::class, 'create'])->name('users.create');
+Route::post('crud', [UserController::class, 'store'])->name('añadirUsuario');
+Route::get('crud/{id}/edit', [UserController::class, 'edit'])->name('editarUsuario');
+Route::put('crud/{id}', [UserController::class, 'update'])->name('modificar');
 
 
 

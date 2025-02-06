@@ -6,6 +6,9 @@
     <h1 class="text-center" style="margin:40px">Añadir Nuevo Usuario</h1>
 
     <div class="container" style="max-width: 600px;">
+        @error('email')
+        <div class="alert alert-danger text-center">{{$message}}</div>
+        @enderror
         <form action="{{ route('añadirUsuario') }}" method="POST">
             @csrf
             <div class="mb-3">
