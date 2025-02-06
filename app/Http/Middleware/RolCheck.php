@@ -19,6 +19,6 @@ class RolCheck
         if (auth()->user()->role === $role)
         return $next($request);
         else
-        return redirect('login');
+        return redirect('/');
     }
 }
