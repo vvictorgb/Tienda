@@ -4,11 +4,11 @@
 
 @section('contenido')
 
-    <!-- Contenedor con distribución y alineación -->
+
     <div class="d-flex justify-content-around align-items-center mb-4" style="padding: 20px;">
         <h1>Listado de Usuarios</h1>
 
-        <!-- Formulario para redirigir a la vista de creación de usuario -->
+
         <form action="{{ route('users.create') }}" method="GET">
             @csrf
             <button type="submit" class="btn btn-success" style="padding: 10px 20px; font-size: 18px; border-radius: 5px;">
@@ -37,7 +37,7 @@
                         <td>{{ $user->role }}</td>
                         <td>
                             <div class="d-flex justify-content-center gap-2">
-                                <!-- Botón de Editar como formulario -->
+
                                 <form action="{{ route('editarUsuario', $user->id) }}" method="GET">
                                     @csrf
                                     <button type="submit" class="btn btn-warning" style="padding: 10px 20px; font-size: 18px; width: 150px; text-align: center; height:60px;">
@@ -45,7 +45,7 @@
                                     </button>
                                 </form>
 
-                                <!-- Formulario para Eliminar -->
+
                                 <form action="{{ route('users.destroy', $user->id) }}" method="POST" onsubmit="return confirm('¿Estás seguro de eliminar este usuario?');">
                                     @csrf
                                     @method('DELETE')

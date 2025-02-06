@@ -4,7 +4,9 @@
 
 @section('contenido')
     <h1 class="text-center" style="margin:40px">Editar Usuario</h1>
-
+    @error('email')
+    <div class="alert alert-danger text-center" style="width:580px; margin:10px auto; ">{{$message}}</div>
+    @enderror
     <div class="container" style="max-width: 600px;">
         <form action="{{ route('modificar', $user->id) }}" method="POST">
             @csrf
