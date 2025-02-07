@@ -2,7 +2,7 @@
 @section('titulo', 'ListaProductos')
 @section('contenido')
 
-    <div class="contenedorFotos" style="position: relative; left: 45px">
+    <div class="contenedorFotos" style="position: relative; left: 140px">
         <div class="row column-gap-3">
             @foreach($productos as $producto)
 

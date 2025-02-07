@@ -3,7 +3,7 @@
 @section('titulo', 'Añadir Usuario')
 
 @section('contenido')
-    <h1 class="text-center" style="margin:40px">Añadir Nuevo Usuario</h1>
+    <h1 class="text-center" style="margin:40px; min-height:110px">Añadir Nuevo Usuario</h1>
 
     <div class="container" style="max-width: 600px;">
         @error('email')

@@ -3,7 +3,7 @@
 @section('titulo', 'Login')
 
 @section('contenido')
-<div class="container d-flex justify-content-center align-items-center">
+<div class="container d-flex justify-content-center align-items-center" style="min-height: 600px">
     <div class="card shadow-lg p-4" style="max-width: 400px; width: 100%; margin-top: 70px;">
         <h2 class="text-center mb-4">Login</h2>
 
