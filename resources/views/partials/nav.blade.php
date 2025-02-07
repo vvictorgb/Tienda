@@ -10,14 +10,19 @@
         @endif
         <a href="{{ route('verCarrito') }}" style="color:black; text-decoration:none;">Carrito
             @php
+            if (Auth::check()) {
+
+
                 $id = auth()->user()->id;
 
-                $response = Http::withToken('Y23PklywnQJGlMNzB0qHkqRNabU0rgECtqqf83q2f75jPMqdHc7w27fLnJqE')->get("http://carrito/api/carrito/$id");
+                $response = Http::withToken('4G4DbfLbRxWJMVTi1DEn5q9YVnsj5a7BCtsSdwbwExIaPplXqoExixygJw2m')->get("http://carrito/api/carrito/$id");
 
 
                 $carrito = json_decode($response->body(), true);
 
-                $cantidad = isset($carrito['cantidad']) ? $carrito['cantidad'] : 0;
+
+            }
+            $cantidad = isset($carrito['cantidad']) ? $carrito['cantidad'] : 0;
             @endphp
             @if ($cantidad > 0)
                 ({{ $cantidad }})
