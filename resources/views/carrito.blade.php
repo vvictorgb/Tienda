@@ -45,7 +45,6 @@
                         <td>
                             <form action="{{ route('actualizarCarrito', ['idProducto' => $item['idProducto']]) }}" method="POST">
                                 @csrf
-                                @method('PUT')
                                 <input type="number" name="cantidad" value="{{ $item['cantidad'] }}" min="1" class="form-control" required>
                                 <button type="submit" class="btn btn-warning mt-2">Actualizar</button>
                             </form>

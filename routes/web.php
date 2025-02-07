@@ -48,7 +48,7 @@ Route::get('/carrito', [CarritoController::class, 'index'])->name('verCarrito')-
 Route::post('/carrito/{idProducto}', [CarritoController::class, 'store'])->name('agregarCarrito')->middleware('auth');
 
 // Ruta para actualizar la cantidad de un producto en el carrito
-Route::put('/carrito/{idProducto}', [CarritoController::class, 'update'])->name('actualizarCarrito')->middleware('auth');
+Route::post('/carrito/modificar/{idProducto}', [CarritoController::class, 'update'])->name('actualizarCarrito')->middleware('auth');
 
 
 // Ruta para eliminar un producto del carrito
