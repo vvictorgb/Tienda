@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="/css/app.css" type="text/css">
 </head>
 
-<body>
+<body style="overflow: hidden">
     @include('partials.nav')
     @yield('contenido')
     @include('partials.footer')
