@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\CarritoController;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\PedidoController;
 use App\Http\Controllers\ProductoController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
@@ -59,4 +60,11 @@ Route::delete('/carrito/vaciar', [CarritoController::class, 'destroyAll'])->name
 
 // Ruta para confirmar el pedido
 Route::get('/carrito/confirmar', [CarritoController::class, 'confirmarPedido'])->name('confirmarPedido')->middleware('auth');
+
+
+
+
+
+Route::get('/carrito/confirmar', [PedidoController::class, 'confirmarPedido'])->name('confirmarPedido')->middleware('auth');
+Route::get('/pedido/{idPedido}', [PedidoController::class, 'showPedido'])->name('showPedido')->middleware('auth');
 

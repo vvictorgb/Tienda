@@ -15,7 +15,7 @@
 
                 $id = auth()->user()->id;
 
-                $response = Http::withToken('4G4DbfLbRxWJMVTi1DEn5q9YVnsj5a7BCtsSdwbwExIaPplXqoExixygJw2m')->get("http://carrito/api/carrito/$id");
+                $response = Http::withToken('Y23PklywnQJGlMNzB0qHkqRNabU0rgECtqqf83q2f75jPMqdHc7w27fLnJqE')->get("http://carrito/api/carrito/$id");
 
 
                 $carrito = json_decode($response->body(), true);

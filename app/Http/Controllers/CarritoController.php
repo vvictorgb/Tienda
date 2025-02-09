@@ -8,7 +8,7 @@ use App\Models\Producto; // Asegúrate de tener el modelo Producto si lo necesit
 class CarritoController extends Controller
 {
     protected $apiUrl = 'carrito/api/carrito';  // Cambia esta URL al URL real de tu API
-    protected $apiToken = '4G4DbfLbRxWJMVTi1DEn5q9YVnsj5a7BCtsSdwbwExIaPplXqoExixygJw2m';  // Cambia esto por tu token real
+    protected $apiToken = 'Y23PklywnQJGlMNzB0qHkqRNabU0rgECtqqf83q2f75jPMqdHc7w27fLnJqE';  // Cambia esto por tu token real
 
     public function index()
     {
