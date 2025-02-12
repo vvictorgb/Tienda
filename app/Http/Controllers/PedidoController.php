@@ -11,10 +11,10 @@ class PedidoController extends Controller
 {
     public function confirmarPedido()
     {
-        // Obtener el ID del usuario autenticado
+
         $idUsuario = auth()->user()->id;
 
-        // Obtener los productos del carrito a través de la API
+
         $response = Http::withToken('Y23PklywnQJGlMNzB0qHkqRNabU0rgECtqqf83q2f75jPMqdHc7w27fLnJqE') // Reemplaza por el token adecuado
                         ->get("http://carrito/api/carrito", [
                             'idUsuario' => $idUsuario
