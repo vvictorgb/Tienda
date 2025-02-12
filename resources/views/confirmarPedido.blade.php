@@ -1,10 +1,10 @@
-@extends('plantilla')  <!-- Asegúrate de que el nombre del layout sea correcto -->
+@extends('plantilla')
 @section('titulo', 'Confirmar Pedido')
-@section('contenido')  <!-- Esto se asegura de que la sección 'content' se inserte en el layout principal -->
+@section('contenido')
     <div class="container">
         <h2>Pedido Confirmado</h2>
 
-        <!-- Mostrar los detalles del pedido -->
+
         <div class="card">
             <div class="card-header">
                 <strong>Pedido ID:</strong> {{ $pedido->id }}
@@ -13,8 +13,8 @@
                 <h4>Cliente: {{ $pedido->idCliente }}</h4>
                 <h5>Fecha de Creación: {{ $pedido->created_at->format('d/m/Y H:i') }}</h5>
 
-                <!-- Mostrar los datos del usuario (como el email) -->
-                <h5>Usuario: {{ Auth::user()->email }}</h5>  <!-- Mostramos el email del usuario autenticado -->
+
+                <h5>Usuario: {{ Auth::user()->email }}</h5>
 
                 <h3>Detalles del Pedido</h3>
                 <table class="table">
@@ -48,7 +48,7 @@
             </div>
         </div>
 
-        <!-- Botón para regresar al listado de productos -->
+
         <div class="mt-4">
             <a href="{{ route('listadoProductos') }}" class="btn btn-primary">Volver al Listado de Productos</a>
         </div>

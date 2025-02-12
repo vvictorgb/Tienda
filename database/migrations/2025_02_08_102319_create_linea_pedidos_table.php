@@ -14,14 +14,14 @@ class CreateLineaPedidosTable extends Migration
     public function up()
     {
         Schema::create('lineaspedidos', function (Blueprint $table) {
-            $table->id(); // ID autoincremental de la línea de pedido
-            $table->unsignedBigInteger('idPedido'); // ID del pedido al que pertenece
-            $table->integer('numeroLinea'); // Número de línea dentro del pedido
-            $table->unsignedBigInteger('idProducto'); // ID del producto comprado
-            $table->integer('cantidad'); // Cantidad comprada
+            $table->id();
+            $table->unsignedBigInteger('idPedido');
+            $table->integer('numeroLinea');
+            $table->unsignedBigInteger('idProducto');
+            $table->integer('cantidad');
             $table->timestamps();
 
-            // Claves foráneas
+
             $table->foreign('idPedido')->references('id')->on('pedidos')->onDelete('cascade');
             $table->foreign('idProducto')->references('id')->on('productos')->onDelete('cascade');
         });
